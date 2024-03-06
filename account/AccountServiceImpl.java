@@ -55,7 +55,7 @@ public class AccountServiceImpl extends AbstractService<Account> implements Acco
     }
 
     @Override
-    public Long count() {
+    public String count() {
         return null;
     }
 
