@@ -15,7 +15,10 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     private static UserServiceImpl instance = new UserServiceImpl();
     Map<String, User> users;
 
+    UserRepository userRepo;
+
     private UserServiceImpl() {
+        this.userRepo = UserRepository.getInstance();
         this.users = new HashMap<>();
     }
 
@@ -36,7 +39,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         return users.getOrDefault(user.getUsername(), User.bulder().password("").build())
                 .getPassword()
                 .equals(user.getPassword()) ?
-                "로그인 성공" : "로그인 실패";
+                user.getUsername() + "님 로그인 성공" : user.getUsername() + "님 로그인 실패";
     }
 
     @Override
@@ -46,24 +49,29 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
 
     @Override
     public Optional findById(Long id) {
-        return Optional.empty();
+        return Optional.of(users
+                .values()
+                .stream()
+                .filter(i -> i.getUsername().equals(id))
+                .collect(Collectors.toList()).get(0));
     }
 
     @Override
     public String updatePassword(User user) {
         users.get(user.getUsername()).setPassword(user.getPassword());
 
-        return "비번 변경 성공";
+        return user.getName() + "님 비밀번호 변경 성공";
     }
 
     @Override
     public String delete(User user) {
-        return null;
+        users.remove(user.getUsername());
+        return "탈퇴 완료";
     }
 
     @Override
     public Boolean existsById(Long id) {
-        return null;
+        return users.containsKey(id);
     }
 
     @Override
@@ -88,10 +96,11 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     @Override
     public List<?> findUsersByJob(String job) {
 
+        users.values().stream().forEach(i -> System.out.println("직업 :" + i.getJob()));
         return users
                 .values()
                 .stream()
-                .filter(i -> i.getName().equals(job))
+                .filter(i -> i.getJob().equals(job))
                 .collect(Collectors.toList());
     }
 
@@ -105,13 +114,13 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     }
 
     @Override
-    public Long count() {
-        return null;
+    public String count() {
+        return users.size() + "";
     }
 
     @Override
     public Optional getOne(String id) {
-        return Optional.empty();
+        return Optional.of(users.get(id));
     }
 
     @Override

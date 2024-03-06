@@ -31,7 +31,7 @@ public class UserController {
                 .job(input.next())
                 .build());
 
-        return "gd";
+        return "반갑습니다.";
     }
 
     public String login(Scanner input) {
@@ -48,19 +48,21 @@ public class UserController {
     public String updatePassword(Scanner input) {
         return user.updatePassword(User.bulder()
                 .username(input.next())
-                .socialSecurityNumber(input.next())
-                .address(input.next())
-                .phoneNumber(input.next())
                 .password(input.next())
+                .socialSecurityNumber(input.next())
                 .build());
     }
 
-    public String deleteUser(Scanner input) {
-        return user.delete(User.bulder()
+    public String delete(Scanner input) {
+        user.delete(User.bulder()
                 .username(input.next())
                 .build());
+        return "회원 탈퇴 완료.";
     }
 
+    public Boolean existsById(Scanner scanner) {
+        return user.existsById(Long.parseLong(scanner.next()));
+    }
 
     public List<?> findUsersByName(Scanner input) {
         return user.findUsersByName(input.next());
@@ -79,9 +81,12 @@ public class UserController {
         return user.findUserByJobFromMap(input.next());
     }
 
-    public Long count() {
-        System.out.println("회원수");
+    public String count() {
         return user.count();
+    }
+
+    public Optional<User> getOne(Scanner scanner) {
+        return user.getOne(scanner.next());
     }
 
     public Map<String, ?> getUserMap() {
