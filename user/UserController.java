@@ -2,6 +2,7 @@ package user;
 
 import enums.Messenger;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -85,12 +86,16 @@ public class UserController {
         return user.count();
     }
 
-    public Optional<User> getOne(Scanner scanner) {
-        return user.getOne(scanner.next());
+    public Optional<User> getOne(Scanner input) {
+        return user.getOne(input.next());
     }
 
     public Map<String, ?> getUserMap() {
         return user.getUserMap();
+    }
+
+    public List<?> findUsers() throws SQLException {
+        return user.findUsers();
     }
 
 }

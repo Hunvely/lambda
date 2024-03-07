@@ -1,10 +1,12 @@
 package user;
 
+import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
 public class UserView {
-    public static void main(Scanner input) {
+    public static void main(Scanner input) throws SQLException {
         UserController userController = new UserController();
         String msg = userController.addUsers();
         System.out.println(" addUsers 결과 : " + msg);
@@ -35,7 +37,8 @@ public class UserView {
                     break;
                 case "3":
                     System.out.println("3-회원의 ID를 검색합니다.");
-                    System.out.println(userController.getOne(input));
+                     System.out.println(userController.getOne(input));
+
                     break;
                 case "4":
                     System.out.println("4-회원의 비밀번호를 변경합니다.");
@@ -50,10 +53,11 @@ public class UserView {
                 case "6":
                     System.out.println("6-회원목록");
                     System.out.println("6-회원목록");
-                    Map<String, ?> users = userController.getUserMap();
+                    /*Map<String, ?> users = userController.getUserMap();
                     users.forEach((k, v) -> {
                         System.out.printf("아이디: %s, 회원정보: %s", k, v);
-                    });
+                    });*/
+                    List<?> findUsers = userController.findUsers();
                     break;
                 case "7":
                     System.out.println("7-이름검색");

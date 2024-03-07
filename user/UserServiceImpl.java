@@ -6,6 +6,7 @@ import common.UtilServiceImpl;
 import enums.Messenger;
 import lombok.Getter;
 
+import java.sql.SQLException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -13,8 +14,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
 
     @Getter
     private static UserServiceImpl instance = new UserServiceImpl();
-    Map<String, User> users;
-
+    private Map<String, User> users;
     UserRepository userRepo;
 
     private UserServiceImpl() {
@@ -144,5 +144,15 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         }
         users = map;
         return users.size() + "개 더미값 추가";
+    }
+
+    @Override
+    public String test(User user) {
+        return "";
+    }
+
+    @Override
+    public List<?> findUsers() throws SQLException {
+        return userRepo.findUsers();
     }
 }
