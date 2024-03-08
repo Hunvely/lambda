@@ -10,15 +10,18 @@ public class ArticleView {
 
         ArticleController articleController = new ArticleController();
 
-        String menuSelect = input.next();
         while (true) {
             System.out.println("0 종료 | 1 글 목록");
+            System.out.print(" 입력 : ");
+            String menuSelect = input.next();
             switch (menuSelect) {
                 case "0":
                     System.out.println("종료");
                     return;
                 case "1":
-                    List<?> articleList = articleController.articleList();
+                    System.out.println(" 1 - 글 목록");
+                    articleController.findAll().forEach(i-> System.out.println(i));
+
                     break;
             }
 

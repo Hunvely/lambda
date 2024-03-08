@@ -5,13 +5,13 @@ import java.util.List;
 
 public class ArticleController {
 
-    ArticleService articleService;
+    private ArticleServiceImpl articleService; // AbstractService를 상속 받는 ArticleServiceImpl로 간다.
 
     public ArticleController() {
         articleService = ArticleServiceImpl.getInstance();
     }
 
-    public List<?> articleList() throws SQLException {
-        return articleService.articleList();
+    public List<?> findAll() throws SQLException {
+        return articleService.findAll();
     }
 }
