@@ -31,11 +31,8 @@ public class AuthServiceImpl implements AuthService {
         User userInfo = User.bulder()
                 .username(input.next())
                 .password(input.next())
-                .rePassword(input.next())
                 .name(input.next())
-                .socialSecurityNumber(input.next())
                 .phoneNumber(input.next())
-                .address(input.next())
                 .job(input.next())
                 .build()
                 ;
@@ -57,7 +54,6 @@ public class AuthServiceImpl implements AuthService {
             map.put(username, User.bulder()
                             .username(username)
                             .password("1")
-                            .rePassword("1")
                             .name(util.createRandomName())
                             .build());
         }

@@ -20,7 +20,7 @@ public class BoardView {
             System.out.println("[사용자메뉴] 0-종료\n " +
                     "1 - 자유게시판 이동\n " +
                     "2 - 상품게시판 이동\n " +
-                    "3 - 글 적기 이동");
+                    "3 - 글 목록 이동"); // 기능 출력 확인용. 삭제 예정
             System.out.print("메뉴 선택 : ");
             String menuselect = input.next();
 
