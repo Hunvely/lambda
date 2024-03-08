@@ -28,4 +28,8 @@ public interface UserService {
 
     List<?> findUsers() throws SQLException;
 
+    String createTable() throws SQLException;
+
+    String dropTable() throws SQLException;
+
 }

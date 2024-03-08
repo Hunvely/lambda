@@ -21,14 +21,12 @@ public class UserController {
         return msg;
     }
 
-    public String save(Scanner input) {
+    public String save(Scanner input) throws SQLException {
         user.save(User.bulder()
                 .username(input.next())
                 .password(input.next())
                 .name(input.next())
-                .socialSecurityNumber(input.next())
                 .phoneNumber(input.next())
-                .address(input.next())
                 .job(input.next())
                 .build());
 
@@ -50,7 +48,6 @@ public class UserController {
         return user.updatePassword(User.bulder()
                 .username(input.next())
                 .password(input.next())
-                .socialSecurityNumber(input.next())
                 .build());
     }
 
@@ -98,4 +95,11 @@ public class UserController {
         return user.findUsers();
     }
 
+    public String createTable() throws SQLException {
+        return user.createTable();
+    }
+
+    public String dropTable() throws SQLException {
+        return user.dropTable();
+    }
 }

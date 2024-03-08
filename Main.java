@@ -1,4 +1,5 @@
 import account.AccountView;
+import article.ArticleView;
 import board.BoardView;
 import user.UserView;
 import crawler.CrawlerView;
@@ -16,18 +17,20 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         while (true){
-            System.out.println("=== 0-Exit " +
-                    "1-User " +
-                    "2-Board " +
-                    "3-Account " +
-                    "4-Crawler " +
+            System.out.println("=== x-Exit " +
+                    "u-User " +
+                    "a-Article " +
+                    "b-Board " +
+                    "ac-Account " +
+                    "c-Crawler " +
                     "===");
             switch (input.next()){
-                case "0":  return;
-                case "1": UserView.main(input);break;
-                case "2": BoardView.main(input); break;
-                case "3": AccountView.main(input); break;
-                case "4":  CrawlerView.main(input); break;
+                case "x":  return;
+                case "u": UserView.main(input);break;
+                case "a": ArticleView.main(input);break;
+                case "b": BoardView.main(input); break;
+                case "ac": AccountView.main(input); break;
+                case "c":  CrawlerView.main(input); break;
             }
         }
     }
