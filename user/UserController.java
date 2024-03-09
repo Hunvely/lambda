@@ -28,6 +28,8 @@ public class UserController {
                 .name(input.next())
                 .phoneNumber(input.next())
                 .job(input.next())
+                .height(input.next())
+                .weight(input.next())
                 .build());
 
         return "반갑습니다.";

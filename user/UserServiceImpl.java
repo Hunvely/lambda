@@ -26,7 +26,8 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     @Override
     public Messenger save(User user) throws SQLException {
         users.put(user.getUsername(), user);
-        return userRepo.save();
+        userRepo.save(user);
+        return Messenger.SUCCESS;
     }
 
     @Override

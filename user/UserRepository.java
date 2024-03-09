@@ -1,6 +1,5 @@
 package user;
 
-import crawler.CrawlerRepository;
 import enums.Messenger;
 
 import java.sql.*;
@@ -88,11 +87,28 @@ public class UserRepository {
         return "회원테이블 삭제";
     }
 
-    public Messenger save() throws SQLException {
-        String sql = "INSERT INTO users(username,password,name,phone_number,job,height,weight) VALUES ('?','?','?','?','?','?','?')";
+    public Messenger save(User user) throws SQLException {
+        String sql = "INSERT INTO users(username,password,name,phone_number,job,height,weight)\n" + "VALUES ('?','?','?','?','?','?','?')";
         PreparedStatement pstmt = connection.prepareStatement(sql);
-        pstmt.executeUpdate();
 
-        return Messenger.SUCCESS;
+        if (pstmt.executeUpdate() > 0) {
+            pstmt.clearParameters(); // 기존의 파라미터를 지우고 다시 설정
+            pstmt.setString(1, user.getUsername());
+            pstmt.setString(2, user.getPassword());
+            pstmt.setString(3, user.getName());
+            pstmt.setString(4, user.getPhoneNumber());
+            pstmt.setString(5, user.getJob());
+            pstmt.setString(6, user.getHeight());
+            pstmt.setString(7, user.getWeight());
+
+            if (pstmt.executeUpdate() > 0) {
+                pstmt.close();
+                return Messenger.SUCCESS;
+            } else {
+                return Messenger.FAIL;
+            }
+        } else {
+            return Messenger.FAIL;
+        }
     }
 }
