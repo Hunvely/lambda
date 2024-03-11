@@ -1,6 +1,6 @@
-package common;
+package com.rod.api.common;
 
-import enums.Messenger;
+import com.rod.api.enums.Messenger;
 
 import java.io.IOException;
 import java.util.Map;

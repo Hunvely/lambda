@@ -1,8 +1,8 @@
-package productboard;
+package com.rod.api.productboard;
 
 import lombok.Getter;
-import user.UserRepository;
-import user.UserServiceImpl;
+import com.rod.api.user.UserRepository;
+import com.rod.api.user.UserServiceImpl;
 
 public class ProductBoardRepository {
 

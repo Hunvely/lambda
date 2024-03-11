@@ -1,6 +1,6 @@
-package freeboard;
+package com.rod.api.freeboard;
 
-import board.Board;
+import com.rod.api.board.Board;
 
 public class FreeBoard extends Board {
 

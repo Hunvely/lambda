@@ -1,6 +1,6 @@
-package freeboard;
+package com.rod.api.freeboard;
 
-import productboard.ProductBoardRepository;
+import com.rod.api.productboard.ProductBoardRepository;
 
 public class FreeBoardRepository {
 

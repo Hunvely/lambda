@@ -1,6 +1,6 @@
-package auth;
+package com.rod.api.auth;
 
-import user.User;
+import com.rod.api.user.User;
 
 import java.util.Map;
 import java.util.Scanner;

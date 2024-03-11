@@ -1,7 +1,7 @@
-package freeboard;
+package com.rod.api.freeboard;
 
 import lombok.Getter;
-import productboard.ProductBoardServiceImpl;
+import com.rod.api.productboard.ProductBoardServiceImpl;
 
 public class FreeBoardServiceImpl implements FreeBoardService {
 

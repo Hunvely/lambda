@@ -1,8 +1,8 @@
-package account;
+package com.rod.api.account;
 
-import common.AbstractService;
-import enums.Messenger;
-import user.User;
+import com.rod.api.common.AbstractService;
+import com.rod.api.enums.Messenger;
+import com.rod.api.user.User;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

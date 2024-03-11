@@ -1,8 +1,8 @@
-package auth;
+package com.rod.api.auth;
 
-import common.UtilServiceImpl;
-import user.User;
-import common.UtilService;
+import com.rod.api.common.UtilServiceImpl;
+import com.rod.api.user.User;
+import com.rod.api.common.UtilService;
 
 import java.util.HashMap;
 import java.util.Map;

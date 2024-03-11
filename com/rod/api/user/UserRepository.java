@@ -1,6 +1,11 @@
-package user;
+package com.rod.api.user;
 
-import enums.Messenger;
+
+import com.rod.api.enums.Messenger;
+
+import com.rod.api.crawler.CrawlerRepository;
+import com.rod.api.enums.Messenger;
+
 
 import java.sql.*;
 import java.util.List;
@@ -8,7 +13,6 @@ import java.util.List;
 public class UserRepository {
 
     private static UserRepository instance;
-
     static {
         try {
             instance = new UserRepository();

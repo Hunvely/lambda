@@ -1,6 +1,6 @@
-package productboard;
+package com.rod.api.productboard;
 
-import user.UserServiceImpl;
+import com.rod.api.user.UserServiceImpl;
 
 public class ProductBoardController {
 

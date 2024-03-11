@@ -1,11 +1,11 @@
-package article;
+package com.rod.api.article;
 
-import account.AccountServiceImpl;
-import common.AbstractService;
-import enums.Messenger;
+import com.rod.api.account.AccountServiceImpl;
+import com.rod.api.common.AbstractService;
+import com.rod.api.enums.Messenger;
 import lombok.Getter;
-import user.User;
-import user.UserServiceImpl;
+import com.rod.api.user.User;
+import com.rod.api.user.UserServiceImpl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

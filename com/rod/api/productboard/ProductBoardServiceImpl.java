@@ -1,7 +1,7 @@
-package productboard;
+package com.rod.api.productboard;
 
 import lombok.Getter;
-import user.UserServiceImpl;
+import com.rod.api.user.UserServiceImpl;
 
 public class ProductBoardServiceImpl implements ProductBoardService{
 

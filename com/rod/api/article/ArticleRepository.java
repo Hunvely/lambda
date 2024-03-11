@@ -1,7 +1,7 @@
-package article;
+package com.rod.api.article;
 
 import lombok.Getter;
-import user.UserRepository;
+import com.rod.api.user.UserRepository;
 
 import java.sql.*;
 import java.util.ArrayList;

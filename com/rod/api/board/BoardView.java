@@ -1,10 +1,10 @@
-package board;
+package com.rod.api.board;
 
-import article.ArticleView;
-import common.UtilService;
-import common.UtilServiceImpl;
-import freeboard.FreeBoardView;
-import productboard.ProductBoardView;
+import com.rod.api.article.ArticleView;
+import com.rod.api.common.UtilService;
+import com.rod.api.common.UtilServiceImpl;
+import com.rod.api.freeboard.FreeBoardView;
+import com.rod.api.productboard.ProductBoardView;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

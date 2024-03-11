@@ -1,4 +1,4 @@
-package freeboard;
+package com.rod.api.freeboard;
 
 public class FreeBoardController {
 

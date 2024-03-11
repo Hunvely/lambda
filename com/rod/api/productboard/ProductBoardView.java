@@ -1,4 +1,4 @@
-package productboard;
+package com.rod.api.productboard;
 
 import java.util.Scanner;
 

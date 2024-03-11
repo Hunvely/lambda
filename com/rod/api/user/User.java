@@ -1,4 +1,4 @@
-package user;
+package com.rod.api.user;
 
 import lombok.*;
 

@@ -1,6 +1,6 @@
-package productboard;
+package com.rod.api.productboard;
 
-import board.Board;
+import com.rod.api.board.Board;
 
 public class ProductBoard extends Board {
 }
