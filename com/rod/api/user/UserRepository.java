@@ -60,8 +60,8 @@ public class UserRepository {
         return null;
     }
 
-    public String createTable() throws SQLException {
-        String sql = "CREATE TABLE users(                               \n" +
+    public Messenger createTable() throws SQLException {
+        String sql = "CREATE TABLE IF NOT EXISTS users(                               \n" +
                 "  id INT NOT NULL AUTO_INCREMENT,                 \n" +
                 "  username VARCHAR(20) NOT NULL,                          \n" +
                 "  password VARCHAR(20) NOT NULL,                      \n" +
@@ -73,9 +73,10 @@ public class UserRepository {
                 "  CONSTRAINT users_pk PRIMARY KEY(id)             \n" +
                 ");";
         PreparedStatement pstmt = connection.prepareStatement(sql);
-        pstmt.executeUpdate();
-
-        return "회원테이블 생성";
+        int ex = pstmt.executeUpdate();
+        pstmt.close();
+        connection.close();
+        return (ex == 0) ? Messenger.SUCCESS : Messenger.FAIL;
     }
 
     public String dropTable() throws SQLException {

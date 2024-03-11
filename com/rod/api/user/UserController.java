@@ -97,7 +97,7 @@ public class UserController {
         return user.findUsers();
     }
 
-    public String createTable() throws SQLException {
+    public Messenger createTable() throws SQLException {
         return user.createTable();
     }
 
