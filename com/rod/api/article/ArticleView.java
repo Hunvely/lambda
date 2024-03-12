@@ -1,7 +1,6 @@
 package com.rod.api.article;
 
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Scanner;
 
 public class ArticleView {
@@ -20,7 +19,7 @@ public class ArticleView {
                     return;
                 case "1":
                     System.out.println(" 1 - 글 목록");
-                    articleController.findAll().forEach(i-> System.out.println(i));
+                    articleController.findAll().forEach(i -> System.out.println(i));
 
                     break;
             }

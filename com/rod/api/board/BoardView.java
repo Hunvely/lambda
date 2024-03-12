@@ -1,14 +1,10 @@
 package com.rod.api.board;
 
 import com.rod.api.article.ArticleView;
-import com.rod.api.common.UtilService;
-import com.rod.api.common.UtilServiceImpl;
 import com.rod.api.freeboard.FreeBoardView;
 import com.rod.api.productboard.ProductBoardView;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class BoardView {

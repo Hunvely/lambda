@@ -2,7 +2,6 @@ package com.rod.api.user;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class UserView {

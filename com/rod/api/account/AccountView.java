@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class AccountView {
     public static void main(Scanner input) {
         AccountController accountController = new AccountController();
-        while(true){
+        while (true) {
             System.out.println("[Account] 0-Exit 1-Create 2-Deposit " +
                     "3-Withdraw 4-Balance 5-Remove 6-Account List");
-            switch (input.next()){
-                case "0": return;
+            switch (input.next()) {
+                case "0":
+                    return;
                 case "1":
                     System.out.println("Create Account");
                     System.out.println(accountController.createAccount(input));
@@ -32,7 +33,7 @@ public class AccountView {
                     break;
                 case "6":
                     System.out.println("Account List");
-                    accountController.getAccounts().forEach((i)-> {
+                    accountController.getAccounts().forEach((i) -> {
                         System.out.println(i);
                     });
                     break;
