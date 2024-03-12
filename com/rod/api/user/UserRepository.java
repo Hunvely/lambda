@@ -13,6 +13,7 @@ import java.util.List;
 public class UserRepository {
 
     private static UserRepository instance;
+
     static {
         try {
             instance = new UserRepository();
@@ -79,7 +80,7 @@ public class UserRepository {
         PreparedStatement pstmt = connection.prepareStatement(sql);
         int ex = pstmt.executeUpdate();
         pstmt.close();
-        connection.close();
+
         return (ex == 0) ? Messenger.SUCCESS : Messenger.FAIL;
     }
 

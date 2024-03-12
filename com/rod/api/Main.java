@@ -26,6 +26,8 @@ public class Main {
                     "ac-Account " +
                     "c-Crawler " +
                     "===");
+            String str = input.nextLine();
+
             switch (input.next()){
                 case "x":  return;
                 case "u": UserView.main(input);break;
