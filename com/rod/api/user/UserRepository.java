@@ -105,7 +105,6 @@ public class UserRepository {
         pstmt.setString(6, user.getHeight());
         pstmt.setString(7, user.getWeight());
 
-
         return (pstmt.executeUpdate() > 0) ? Messenger.SUCCESS : Messenger.FAIL;
 
 

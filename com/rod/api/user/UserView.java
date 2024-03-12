@@ -15,7 +15,7 @@ public class UserView {
                     "2.Sigh in\n" +
                     "3.Search ID\n" +
                     "4.Update password\n" +
-                    "5.Delete src.com.dennis.api.account\n" +
+                    "5.Delete account\n" +
                     "ls.User list\n" +
                     "7.Search name\n" +
                     "8.Search job\n" +
@@ -31,7 +31,7 @@ public class UserView {
                     System.out.println(" | ID | Password | Name | PhoneNumber | Job | Height | Weight | ");
                     System.out.println(userController.save(input));
                     break;
-                case "login":
+                case "2":
                     System.out.println("2.Sigh in");
                     System.out.println(" | ID | Password | Input ");
                     System.out.println(userController.login(input));
@@ -47,7 +47,7 @@ public class UserView {
                     System.out.println(userController.updatePassword(input));
                     break;
                 case "5":
-                    System.out.println("5 - 탈퇴");
+                    System.out.println("5.Delete account");
                     System.out.println(" 탈퇴하실 ID를 입력하세요.");
                     System.out.println(userController.delete(input));
                     break;
@@ -78,7 +78,7 @@ public class UserView {
                 case "9":
                     System.out.println("9.Number of users");
                     msg = userController.count();
-                    System.out.println("회원 수 : " + msg + "명");
+                    System.out.println("Number of users : " + msg);
                     break;
                 case "touch":
                     System.out.println("touch.Create table");
