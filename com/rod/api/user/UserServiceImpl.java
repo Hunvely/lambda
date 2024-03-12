@@ -158,7 +158,7 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     }
 
     @Override
-    public String dropTable() throws SQLException {
+    public Messenger dropTable() throws SQLException {
         return userRepo.dropTable();
     }
 

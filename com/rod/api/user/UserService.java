@@ -32,6 +32,6 @@ public interface UserService {
 
     Messenger createTable() throws SQLException;
 
-    String dropTable() throws SQLException;
+    Messenger dropTable() throws SQLException;
 
 }

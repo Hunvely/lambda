@@ -45,7 +45,7 @@ public class UserRepository {
         if (rs.next()) {
             do {
                 System.out.printf("ID : %s\t Username : %s\t Password : %s\t Name : %s\t Phone_number : %s\t Job : %s\t Height : %s\t Weight : %s\n",
-                        rs.getInt("id"),
+                        rs.getLong("id"),
                         rs.getString(2),
                         rs.getString(3),
                         rs.getString(4),
@@ -84,34 +84,30 @@ public class UserRepository {
         return (ex == 0) ? Messenger.SUCCESS : Messenger.FAIL;
     }
 
-    public String dropTable() throws SQLException {
+    public Messenger dropTable() throws SQLException {
         String sql = "drop table users;";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.executeUpdate();
 
-
-        return "회원테이블 삭제";
+        return Messenger.SUCCESS;
     }
 
     public Messenger save(User user) throws SQLException {
-        String sql = "INSERT INTO users(username,password,name,phone_number,job,height,weight)\n" + "VALUES ('?','?','?','?','?','?','?')";
+        String sql = "INSERT INTO users(username,password,name,phone_number,job,height,weight)\n" +
+                "VALUES (?,?,?,?,?,?,?)";
         PreparedStatement pstmt = connection.prepareStatement(sql);
 
-        if (pstmt.executeUpdate() > 0) {
-            pstmt.clearParameters(); // 기존의 파라미터를 지우고 다시 설정
-            pstmt.setString(1, user.getUsername());
-            pstmt.setString(2, user.getPassword());
-            pstmt.setString(3, user.getName());
-            pstmt.setString(4, user.getPhoneNumber());
-            pstmt.setString(5, user.getJob());
-            pstmt.setString(6, user.getHeight());
-            pstmt.setString(7, user.getWeight());
+        pstmt.setString(1, user.getUsername());
+        pstmt.setString(2, user.getPassword());
+        pstmt.setString(3, user.getName());
+        pstmt.setString(4, user.getPhoneNumber());
+        pstmt.setString(5, user.getJob());
+        pstmt.setString(6, user.getHeight());
+        pstmt.setString(7, user.getWeight());
 
 
-            return pstmt.executeUpdate() > 0 ? Messenger.SUCCESS : Messenger.FAIL;
+        return (pstmt.executeUpdate() > 0) ? Messenger.SUCCESS : Messenger.FAIL;
 
-        } else {
-            return Messenger.FAIL;
-        }
+
     }
 }

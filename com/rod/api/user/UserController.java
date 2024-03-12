@@ -21,7 +21,7 @@ public class UserController {
         return msg;
     }
 
-    public String save(Scanner input) throws SQLException {
+    public Messenger save(Scanner input) throws SQLException {
         user.save(User.bulder()
                 .username(input.next())
                 .password(input.next())
@@ -32,7 +32,7 @@ public class UserController {
                 .weight(input.next())
                 .build());
 
-        return "반갑습니다.";
+        return Messenger.SUCCESS;
     }
 
     public String login(Scanner input) {
@@ -101,7 +101,7 @@ public class UserController {
         return user.createTable();
     }
 
-    public String dropTable() throws SQLException {
+    public Messenger dropTable() throws SQLException {
         return user.dropTable();
     }
 }
