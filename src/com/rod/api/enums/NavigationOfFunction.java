@@ -70,6 +70,7 @@ public enum NavigationOfFunction {
         String msg = input.next();
         return Stream.of(values())
                 .filter(i -> i.menu.equals(msg))
-                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다.")).function.apply(input);
+                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다."))
+                .function.apply(input);
     }
 }

@@ -89,7 +89,8 @@ public enum UserRouter {
         String msg = input.next();
         return Stream.of(values())
                 .filter(i -> i.menu.equals(msg))
-                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다.")).biPredicate.test(input, userCtrl);
+                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다."))
+                .biPredicate.test(input, userCtrl);
 
     }
 

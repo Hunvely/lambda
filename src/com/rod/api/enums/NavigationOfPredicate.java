@@ -14,11 +14,11 @@ import java.util.stream.Stream;
 
 public enum NavigationOfPredicate {
 
-    x("x", i -> {
+    EXIT("x", i -> {
         System.out.println("EXIT");
         return false;
     }),
-    u("u", i -> {
+    User("u", i -> {
         System.out.println("User");
         try {
             UserView.main(i);
@@ -27,7 +27,7 @@ public enum NavigationOfPredicate {
         }
         return true;
     }),
-    a("a", i -> {
+    Article("a", i -> {
         System.out.println("Article");
         try {
             ArticleView.main(i);
@@ -36,7 +36,7 @@ public enum NavigationOfPredicate {
         }
         return true;
     }),
-    b("b", i -> {
+    Board("b", i -> {
         System.out.println("Board");
         try {
             BoardView.main(i);
@@ -45,12 +45,12 @@ public enum NavigationOfPredicate {
         }
         return true;
     }),
-    ac("ac", i -> {
+    Account("ac", i -> {
         System.out.println("Account");
         AccountView.main(i);
         return true;
     }),
-    c("c", i -> {
+    Crawler("c", i -> {
         System.out.println("Crawler");
         try {
             CrawlerView.main(i);
@@ -79,6 +79,7 @@ public enum NavigationOfPredicate {
         String msg = input.next();
         return Stream.of(values())
                 .filter(i -> i.menu.equals(msg))
-                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다.")).predicate.test(input);
+                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다."))
+                .predicate.test(input);
     }
 }

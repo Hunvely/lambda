@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcf1f7e4-3f73-43ae-9d1e-9900bc9ef2b2" name="Changes" comment="Userview code -&gt; UserRouter">
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfSuplier.java" afterDir="false" />
+    <list default="true" id="fcf1f7e4-3f73-43ae-9d1e-9900bc9ef2b2" name="Changes" comment="lambda expression of Navigation">
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/AccountRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/ArticleRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/lab/ListOfIsGood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/Weekend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/WeekendNoScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/WeekendStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/WeekendStrategyNoScanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GradeView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Bitcamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Main.java" beforeDir="false" />
@@ -43,10 +52,13 @@
       <change beforePath="$PROJECT_DIR$/../KaupView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PersonKaup.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentGrade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/rod/api/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/Nevigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfPredicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/article/ArticleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/article/ArticleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfPredicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfPredicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/UserRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/UserRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/user/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/user/UserView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +108,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.Weekend.executor": "Run",
     "Application.com.rod.api.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.ItemTest.add.executor": "Run",
@@ -150,6 +163,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.com.rod.api.Main">
+    <configuration name="Weekend" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rod.api.strategy.Weekend" />
+      <module name="lambda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rod.api.strategy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.rod.api.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rod.api.Main" />
       <module name="lambda" />
@@ -198,6 +224,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.rod.api.Main" />
+        <item itemvalue="Application.Weekend" />
         <item itemvalue="JUnit.ItemTest.add" />
         <item itemvalue="JUnit.ItemTest.systemOut" />
       </list>
@@ -222,7 +249,7 @@
       <workItem from="1710213462517" duration="16912000" />
       <workItem from="1710234801750" duration="608000" />
       <workItem from="1710290032230" duration="30892000" />
-      <workItem from="1710376274017" duration="11084000" />
+      <workItem from="1710376274017" duration="24858000" />
     </task>
     <task id="LOCAL-00001" summary="edit Crawler code">
       <option name="closed" value="true" />
@@ -384,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710327899461</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="lambda expression of Navigation">
+      <option name="closed" value="true" />
+      <created>1710390078158</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1710390078158</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,6 +445,7 @@
     <MESSAGE value="Create Navigation code for Strategy pattern" />
     <MESSAGE value="SQL exercise" />
     <MESSAGE value="Userview code -&gt; UserRouter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Userview code -&gt; UserRouter" />
+    <MESSAGE value="lambda expression of Navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="lambda expression of Navigation" />
   </component>
 </project>
