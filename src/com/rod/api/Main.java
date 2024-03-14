@@ -1,11 +1,8 @@
 package com.rod.api;
 
-import com.rod.api.account.AccountView;
-import com.rod.api.article.ArticleView;
-import com.rod.api.board.BoardView;
-import com.rod.api.enums.Nevigation;
-import com.rod.api.user.UserView;
-import com.rod.api.crawler.CrawlerView;
+import com.rod.api.enums.NavigationOfFunction;
+import com.rod.api.enums.NavigationOfPredicate;
+import com.rod.api.enums.NavigationOfSuplier;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -18,6 +15,8 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         Scanner input = new Scanner(System.in);
-        while (Nevigation.nevigate(input)) ;
+       // while (NavigationOfPredicate.select(input)) ;
+        while(NavigationOfFunction.select(input).equals("x"));
+        //while(NavigationOfSuplier.select(input).equals("x"));
     }
 }

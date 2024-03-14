@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf1f7e4-3f73-43ae-9d1e-9900bc9ef2b2" name="Changes" comment="Userview code -&gt; UserRouter">
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/product/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/rod/api/product/ItemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfSuplier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GradeView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Bitcamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Main.java" beforeDir="false" />
@@ -42,6 +43,10 @@
       <change beforePath="$PROJECT_DIR$/../KaupView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PersonKaup.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentGrade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/Nevigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfPredicate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +57,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -83,6 +88,7 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2dFbCWUsknHZBgtp0jXMJioVNFe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,7 +107,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop-1.2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/bitcamp/IdeaProjects/oop",
     "node.js.detected.package.eslint": "true",
@@ -110,10 +116,10 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/bitcamp/IdeaProjects/lambda/src/Main.java",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -143,7 +149,7 @@
       <recent name="board" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ItemTest.add">
+  <component name="RunManager" selected="Application.com.rod.api.Main">
     <configuration name="com.rod.api.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rod.api.Main" />
       <module name="lambda" />
@@ -191,9 +197,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.rod.api.Main" />
         <item itemvalue="JUnit.ItemTest.add" />
         <item itemvalue="JUnit.ItemTest.systemOut" />
-        <item itemvalue="Application.com.rod.api.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +222,7 @@
       <workItem from="1710213462517" duration="16912000" />
       <workItem from="1710234801750" duration="608000" />
       <workItem from="1710290032230" duration="30892000" />
-      <workItem from="1710376274017" duration="5400000" />
+      <workItem from="1710376274017" duration="11084000" />
     </task>
     <task id="LOCAL-00001" summary="edit Crawler code">
       <option name="closed" value="true" />
@@ -385,6 +391,9 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src" />
+    </ignored-roots>
     <MESSAGE value="edit Crawler code" />
     <MESSAGE value="edit common package code" />
     <MESSAGE value="edit Account code" />

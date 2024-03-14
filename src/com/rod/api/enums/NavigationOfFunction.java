@@ -9,66 +9,57 @@ import com.rod.api.user.UserView;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
-import java.util.function.Predicate;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
-public enum Nevigation {
-
-    x("x", i -> {
-        System.out.println("EXIT");
-        return false;
-    }),
-    u("u", i -> {
-        System.out.println("User");
+public enum NavigationOfFunction {
+    Exit("x", scanner -> "x"),
+    User("u", scanner -> {
         try {
-            UserView.main(i);
+            UserView.main(scanner);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return true;
+        return "";
     }),
-    a("a", i -> {
-        System.out.println("Article");
+    Article("a", scanner -> {
         try {
-            ArticleView.main(i);
+            ArticleView.main(scanner);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return true;
+        return "";
     }),
-    b("b", i -> {
-        System.out.println("Board");
+    Board("b", scanner -> {
         try {
-            BoardView.main(i);
+            BoardView.main(scanner);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return true;
+        return "";
     }),
-    ac("ac", i -> {
-        System.out.println("Account");
-        AccountView.main(i);
-        return true;
+    Account("ac", scanner -> {
+        AccountView.main(scanner);
+        return "";
     }),
-    c("c", i -> {
-        System.out.println("Crawler");
+    Crawler("c", scanner -> {
         try {
-            CrawlerView.main(i);
+            CrawlerView.main(scanner);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return true;
+        return "";
     });
 
     private final String menu;
-    private final Predicate<Scanner> predicate;
+    private final Function<Scanner, String> function;
 
-    Nevigation(String menu, Predicate<Scanner> predicate) {
+    NavigationOfFunction(String menu, Function<Scanner, String> function) {
         this.menu = menu;
-        this.predicate = predicate;
+        this.function = function;
     }
 
-    public static Boolean nevigate(Scanner input) {
+    public static String select(Scanner input) {
         System.out.println("=== x-Exit " +
                 "u-User " +
                 "a-Article " +
@@ -79,6 +70,6 @@ public enum Nevigation {
         String msg = input.next();
         return Stream.of(values())
                 .filter(i -> i.menu.equals(msg))
-                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다.")).predicate.test(input);
+                .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다.")).function.apply(input);
     }
 }
