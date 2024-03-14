@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fcf1f7e4-3f73-43ae-9d1e-9900bc9ef2b2" name="Changes" comment="Userview code -&gt; UserRouter">
+      <change afterPath="$PROJECT_DIR$/src/com/rod/api/product/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/rod/api/product/ItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GradeView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Bitcamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/builder/BoardBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/builder/ProductBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/builder/SubjectBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/builder/UserBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/model/BoardDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/model/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/model/StudentGradeDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/model/SubjectDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/model/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/service/GradeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/service/KaupService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/service/UtilService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/serviceImpl/AuthServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/serviceImpl/GradeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/serviceImpl/KaupServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/serviceImpl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/serviceImpl/UtilServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/AuthView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/BoardView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/GradeView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/Index.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/KaupView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/PhoneInheritance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/ProductView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/view/UserView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KaupView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PersonKaup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentGrade.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Hunvely&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2428087a-9697-4e02-a611-a1b1d10c84e6" />
+        <option name="url" value="https://github.com/Hunvely/lambda.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2dFbCWUsknHZBgtp0jXMJioVNFe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.com.rod.api.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ItemTest.add.executor": "Run",
+    "JUnit.ItemTest.systemOut.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/bitcamp/IdeaProjects/oop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/bitcamp/IdeaProjects/lambda/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bitcamp\IdeaProjects\lambda\src\freeboard" />
+      <recent name="C:\Users\bitcamp\IdeaProjects\lambda\src\lib" />
+      <recent name="C:\Users\bitcamp\IdeaProjects\lambda\src\crawler" />
+      <recent name="C:\Users\bitcamp\IdeaProjects\lambda\src\auth" />
+      <recent name="C:\Users\bitcamp\IdeaProjects\lambda\src\user" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.rod.api.product" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="user" />
+      <recent name="account" />
+      <recent name="" />
+      <recent name="board" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ItemTest.add">
+    <configuration name="com.rod.api.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rod.api.Main" />
+      <module name="lambda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rod.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lambda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rod.api.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rod.api.product" />
+      <option name="MAIN_CLASS_NAME" value="com.rod.api.product.ItemTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemTest.systemOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lambda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rod.api.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rod.api.product" />
+      <option name="MAIN_CLASS_NAME" value="com.rod.api.product.ItemTest" />
+      <option name="METHOD_NAME" value="systemOut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ItemTest.add" />
+        <item itemvalue="JUnit.ItemTest.systemOut" />
+        <item itemvalue="Application.com.rod.api.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcf1f7e4-3f73-43ae-9d1e-9900bc9ef2b2" name="Changes" comment="" />
+      <created>1709606654203</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709606654203</updated>
+      <workItem from="1710212172746" duration="1118000" />
+      <workItem from="1710213462517" duration="16912000" />
+      <workItem from="1710234801750" duration="608000" />
+      <workItem from="1710290032230" duration="30892000" />
+      <workItem from="1710376274017" duration="5400000" />
+    </task>
+    <task id="LOCAL-00001" summary="edit Crawler code">
+      <option name="closed" value="true" />
+      <created>1709715304390</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709715304390</updated>
+    </task>
+    <task id="LOCAL-00002" summary="edit common package code">
+      <option name="closed" value="true" />
+      <created>1709715368573</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709715368573</updated>
+    </task>
+    <task id="LOCAL-00003" summary="edit Account code">
+      <option name="closed" value="true" />
+      <created>1709715387891</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709715387891</updated>
+    </task>
+    <task id="LOCAL-00004" summary="edit User code">
+      <option name="closed" value="true" />
+      <created>1709715398240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709715398240</updated>
+    </task>
+    <task id="LOCAL-00005" summary="edit Main code">
+      <option name="closed" value="true" />
+      <created>1709715413051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709715413051</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create board">
+      <option name="closed" value="true" />
+      <created>1709814087710</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709814087710</updated>
+    </task>
+    <task id="LOCAL-00007" summary="create board">
+      <option name="closed" value="true" />
+      <created>1709814099107</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709814099107</updated>
+    </task>
+    <task id="LOCAL-00008" summary="edit code">
+      <option name="closed" value="true" />
+      <created>1709814132069</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709814132069</updated>
+    </task>
+    <task id="LOCAL-00009" summary="User menu connect DB">
+      <option name="closed" value="true" />
+      <created>1709888625106</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709888625106</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Article connect DB">
+      <option name="closed" value="true" />
+      <created>1709888677809</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709888677809</updated>
+    </task>
+    <task id="LOCAL-00011" summary="code edit">
+      <option name="closed" value="true" />
+      <created>1709888694105</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709888694105</updated>
+    </task>
+    <task id="LOCAL-00012" summary="package edit">
+      <option name="closed" value="true" />
+      <created>1710127409038</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710127409038</updated>
+    </task>
+    <task id="LOCAL-00013" summary="package edit">
+      <option name="closed" value="true" />
+      <created>1710135167608</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710135167608</updated>
+    </task>
+    <task id="LOCAL-00014" summary="code edit">
+      <option name="closed" value="true" />
+      <created>1710211945688</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710211945688</updated>
+    </task>
+    <task id="LOCAL-00015" summary="SQL soccer code">
+      <option name="closed" value="true" />
+      <created>1710213415957</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710213415957</updated>
+    </task>
+    <task id="LOCAL-00016" summary="SQL test">
+      <option name="closed" value="true" />
+      <created>1710232648567</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710232648567</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Create Navigation code for Strategy pattern">
+      <option name="closed" value="true" />
+      <created>1710232729316</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1710232729316</updated>
+    </task>
+    <task id="LOCAL-00018" summary="SQL exercise">
+      <option name="closed" value="true" />
+      <created>1710321677323</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1710321677323</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Userview code -&gt; UserRouter">
+      <option name="closed" value="true" />
+      <created>1710321717908</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1710321717908</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Userview code -&gt; UserRouter">
+      <option name="closed" value="true" />
+      <created>1710327899461</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1710327899461</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="edit Crawler code" />
+    <MESSAGE value="edit common package code" />
+    <MESSAGE value="edit Account code" />
+    <MESSAGE value="edit User code" />
+    <MESSAGE value="edit Main code" />
+    <MESSAGE value="create board" />
+    <MESSAGE value="edit code" />
+    <MESSAGE value="User menu connect DB" />
+    <MESSAGE value="Article connect DB" />
+    <MESSAGE value="package edit" />
+    <MESSAGE value="code edit" />
+    <MESSAGE value="SQL soccer code" />
+    <MESSAGE value="SQL test" />
+    <MESSAGE value="Create Navigation code for Strategy pattern" />
+    <MESSAGE value="SQL exercise" />
+    <MESSAGE value="Userview code -&gt; UserRouter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Userview code -&gt; UserRouter" />
+  </component>
+</project>
