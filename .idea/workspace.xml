@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcf1f7e4-3f73-43ae-9d1e-9900bc9ef2b2" name="Changes" comment="lambda expression of Navigation">
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/AccountRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/enums/ArticleRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/lab/ListOfIsGood.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/Weekend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/WeekendNoScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/WeekendStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/rod/api/strategy/WeekendStrategyNoScanner.java" afterDir="false" />
+    <list default="true" id="fcf1f7e4-3f73-43ae-9d1e-9900bc9ef2b2" name="Changes" comment="lambda expression exercise">
       <change beforePath="$PROJECT_DIR$/../GradeView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Bitcamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../IdeaProjects/oop/src/Main.java" beforeDir="false" />
@@ -53,12 +41,12 @@
       <change beforePath="$PROJECT_DIR$/../PersonKaup.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentGrade.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rod/api/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rod/api/article/ArticleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/article/ArticleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfPredicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/NavigationOfPredicate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/UserRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/UserRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rod/api/user/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/user/UserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/enums/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/enums/Messenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/menu/MenuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/menu/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rod/api/menu/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rod/api/menu/MenuServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,42 +93,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Weekend.executor": "Run",
-    "Application.com.rod.api.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.ItemTest.add.executor": "Run",
-    "JUnit.ItemTest.systemOut.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop-1.2",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/bitcamp/IdeaProjects/oop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/bitcamp/IdeaProjects/lambda/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Weekend.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.rod.api.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.ItemTest.add.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ItemTest.systemOut.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop-1.2&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bitcamp/IdeaProjects/oop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/bitcamp/IdeaProjects/lambda/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bitcamp\IdeaProjects\lambda\src\freeboard" />
@@ -249,7 +237,9 @@
       <workItem from="1710213462517" duration="16912000" />
       <workItem from="1710234801750" duration="608000" />
       <workItem from="1710290032230" duration="30892000" />
-      <workItem from="1710376274017" duration="24858000" />
+      <workItem from="1710376274017" duration="24941000" />
+      <workItem from="1710411966753" duration="24000" />
+      <workItem from="1710462299157" duration="2087000" />
     </task>
     <task id="LOCAL-00001" summary="edit Crawler code">
       <option name="closed" value="true" />
@@ -419,7 +409,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710390078158</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="lambda expression of Router">
+      <option name="closed" value="true" />
+      <created>1710409690730</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1710409690730</updated>
+    </task>
+    <task id="LOCAL-00023" summary="lambda expression exercise">
+      <option name="closed" value="true" />
+      <created>1710409708712</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1710409708712</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,6 +452,8 @@
     <MESSAGE value="SQL exercise" />
     <MESSAGE value="Userview code -&gt; UserRouter" />
     <MESSAGE value="lambda expression of Navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="lambda expression of Navigation" />
+    <MESSAGE value="lambda expression of Router" />
+    <MESSAGE value="lambda expression exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="lambda expression exercise" />
   </component>
 </project>
