@@ -3,6 +3,7 @@ package com.rod.api.menu;
 import com.rod.api.enums.Messenger;
 import lombok.Getter;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class MenuController {
@@ -14,16 +15,20 @@ public class MenuController {
         menuService = MenuServiceImpl.getInstance();
     }
 
-    public Messenger makeMenuTable() {
-        return menuService.makeMenuTable();
-    }
+   public Messenger createMenuTable() throws SQLException {
+        return menuService.createMenuTable();
+   }
 
-    public Messenger removeMenuTable() {
-        return menuService.removeTable();
-    }
+   public Messenger deleteMenuTable() throws SQLException {
+        return menuService.deleteMenuTable();
+   }
 
-    public List<?> getMenusByCategory(String category) {
-        return menuService.getMenusByCategory(category);
-    }
+   public List<?> getMenuByCategory(String category) throws SQLException {
+        return menuService.getMenuByCategory(category);
+   }
 
+  /*  public void printMenuCategory(String category) throws SQLException {
+        System.out.println("[" + category + "]");
+        System.out.println();
+    }*/
 }

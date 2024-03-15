@@ -1,5 +1,6 @@
 package com.rod.api.enums;
 
+import com.rod.api.menu.MenuController;
 import com.rod.api.user.UserController;
 
 import java.sql.SQLException;
@@ -10,55 +11,56 @@ import java.util.stream.Stream;
 
 public enum UserRouter {
 
-    exit("x", (scanner, ctrl) -> {
+    exit("x", (scanner) -> {
         return false;
     }),
-    signUp("su", (scanner, ctrl) -> {
+    touch("mk", (scanner) -> {
+        try {
+            UserController.getInstance().createTable();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return true;
+    }),
+    signUp("joi", (scanner) -> {
         System.out.println("Input : | ID | Password | Name | PhoneNumber | Job | Height | Weight | ");
         try {
-            ctrl.save(scanner);
+            UserController.getInstance().save(scanner);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return true;
-    }), signIn("si", (scanner, ctrl) -> {
-        ctrl.login(scanner);
+    }), signIn("log", (scanner) -> {
+        UserController.getInstance().login(scanner);
         return true;
-    }), searchId("fi", (scanner, ctrl) -> {
-        ctrl.getOne(scanner);
+    }), searchId("cat", (scanner) -> {
+        UserController.getInstance().getOne(scanner);
         return true;
-    }), updatePassword("up", (scanner, ctrl) -> {
-        ctrl.updatePassword(scanner);
+    }), updatePassword("ch-pw", (scanner) -> {
+        UserController.getInstance().updatePassword(scanner);
         return true;
-    }), deleteAccount("da", (scanner, ctrl) -> {
-        ctrl.delete(scanner);
+    }), deleteAccount("rm", (scanner) -> {
+        UserController.getInstance().delete(scanner);
         return true;
-    }), userList("ls", ((scanner, ctrl) -> {
+    }), userList("ls-a", ((scanner) -> {
         try {
-            ctrl.findUsers();
+            UserController.getInstance().findUsers();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return true;
-    })), searchName("fn", (scanner, ctrl) -> {
-        ctrl.findUsersByName(scanner);
+    })), searchName("ls-n", (scanner) -> {
+        UserController.getInstance().findUsersByName(scanner);
         return true;
-    }), searchJob("fj", (scanner, ctrl) -> {
-        ctrl.findUsersByJob(scanner);
+    }), searchJob("ls-j", (scanner) -> {
+        UserController.getInstance().findUsersByJob(scanner);
         return true;
-    }), numberOfUsers("nou", (scanner, ctrl) -> {
-        ctrl.count();
+    }), numberOfUsers("cnt", (scanner) -> {
+        UserController.getInstance().count();
         return true;
-    }), touch("touch", (scanner, ctrl) -> {
+    }),  rm("rm", (scanner) -> {
         try {
-            ctrl.createTable();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return true;
-    }), rm("rm", (scanner, ctrl) -> {
-        try {
-            ctrl.dropTable();
+            UserController.getInstance().dropTable();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -66,32 +68,21 @@ public enum UserRouter {
     });
 
     private final String menu;
-    private final BiPredicate<Scanner, UserController> biPredicate;
+    private final Predicate<Scanner> Predicate;
 
-    UserRouter(String menu, BiPredicate<Scanner, UserController> biPredicate) {
+    UserRouter(String menu, Predicate<Scanner> Predicate) {
         this.menu = menu;
-        this.biPredicate = biPredicate;
+        this.Predicate = Predicate;
     }
 
-    public static Boolean userRoute(Scanner input, UserController userCtrl) {
-        System.out.println("=== x.Exit\n" +
-                "su.Sign up\n" +
-                "si.Sigh in\n" +
-                "fi.Search ID\n" +
-                "up.Update password\n" +
-                "da.Delete account\n" +
-                "ls.User list\n" +
-                "fn.Search name\n" +
-                "fj.Search job\n" +
-                "nou.Number of users\n" +
-                "touch.Create table\n" +
-                "rm.Delete table ===");
+    public static Boolean userRoute(Scanner input) throws SQLException {
+        MenuController.getInstance().getMenuByCategory("user")
+                .forEach(i -> System.out.print(i + " "));
         String msg = input.next();
         return Stream.of(values())
                 .filter(i -> i.menu.equals(msg))
                 .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다."))
-                .biPredicate.test(input, userCtrl);
-
+                .Predicate.test(input);
     }
 
 

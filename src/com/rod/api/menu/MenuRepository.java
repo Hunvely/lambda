@@ -25,37 +25,13 @@ public class MenuRepository {
 
     private MenuRepository() throws SQLException {
         conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/erichgammadb",
-                "erichgamma",
-                "erichgammadb");
+                "jdbc:mysql://localhost:3306/roddb",
+                "roddb",
+                "roddb");
         pstmt = null;
         rs = null;
     }
 
-    public Messenger makeTable() {
-        String sql = "CREATE TABLE IF NOT EXISTS menus (" +
-                "id INT AUTO_INCREMENT PRIMARY KEY," +
-                "category VARCHAR(10) NOT NULL," +
-                "item VARCHAR(20) NOT NULL)";
-        try {
-            pstmt = conn.prepareStatement(sql);
-            return pstmt.executeUpdate() >= 0 ? Messenger.SUCCESS : Messenger.FAIL;
-        } catch (SQLException e) {
-            System.err.println("SQL Exception Occurred");
-            return Messenger.SQL_ERROR;
-        }
-    }
-
-    public Messenger removeTable() {
-        String sql = "DROP TABLE IF EXISTS menus";
-        try {
-            pstmt = conn.prepareStatement(sql);
-            return pstmt.executeUpdate() >= 0 ? Messenger.SUCCESS : Messenger.FAIL;
-        } catch (SQLException e) {
-            System.err.println("SQL Exception Occurred");
-            return Messenger.SQL_ERROR;
-        }
-    }
 
     public Messenger insertMenu(Menu menu) {
         String sql = "INSERT INTO menus(category, item) VALUES(?,?)";
@@ -70,18 +46,61 @@ public class MenuRepository {
         }
     }
 
-    public List<?> getMenusByCategory(String category) {
+
+    public Messenger createMenuTable() throws SQLException {
+        String sql = "CREATE TABLE IF NOT EXISTS menus (" +
+                "id INT AUTO_INCREMENT PRIMARY KEY," +
+                "category VARCHAR(10) NOT NULL," +
+                "item VARCHAR(20) NOT NULL)";
+        pstmt = conn.prepareStatement(sql);
+        int res = pstmt.executeUpdate();
+        pstmt.close();
+
+        return (res > 0) ? Messenger.SUCCESS : Messenger.FAIL;
+    }
+
+    public Messenger deleteMenuTable() throws SQLException {
+        String sql = "DROP TABLE IF EXISTS menus";
+        pstmt = conn.prepareStatement(sql);
+        int res = pstmt.executeUpdate();
+        pstmt.close();
+
+        return (res > 0) ? Messenger.SUCCESS : Messenger.FAIL;
+    }
+
+   /* public List<?> getMenuByCategory(String category) throws SQLException {
+        List<Menu> ls = new ArrayList<>();
         String sql = "SELECT m.item FROM menus m WHERE category = ?";
-        List<Menu> menus = new ArrayList<>();
-        try {
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, category);
-            rs = pstmt.executeQuery();
-            while (rs.next()) menus.add(Menu.builder().item(rs.getString(1)).build());
-        } catch (SQLException e) {
-            System.err.println("SQL Exception Occurred");
-            return menus;
+        pstmt = conn.prepareStatement(sql);
+        rs = pstmt.executeQuery();
+        if (rs.next()) {
+            do {
+                Menu menu = Menu.builder()
+                        .item(rs.getString("item"))
+                        .category(rs.getString("category"))
+                        .build();
+                ls.add(menu);
+            } while (rs.next());
+        } else {
+            System.out.println("No Data");
         }
-        return menus;
+        return ls;
+    }*/
+
+    public List<?> getMenuByCategory(String category) throws SQLException {
+        List<String> ls = new ArrayList<>();
+        String sql = "SELECT m.item FROM menus m WHERE category = ?";
+        pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, category);
+        rs = pstmt.executeQuery();
+        if (rs.next()) {
+            do {
+                ls.add(rs.getString("item"));
+            } while (rs.next());
+        }
+        else{
+            System.out.println("No Date");
+        }
+        return ls;
     }
 }

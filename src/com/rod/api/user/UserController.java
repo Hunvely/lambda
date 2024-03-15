@@ -1,6 +1,7 @@
 package com.rod.api.user;
 
 import com.rod.api.enums.Messenger;
+import lombok.Getter;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.Scanner;
 
 public class UserController {
 
+    @Getter
+    private static final UserController instance = new UserController();
     UserServiceImpl user;
 
     public UserController() {

@@ -18,7 +18,7 @@ public enum NavigationOfPredicate {
         System.out.println("EXIT");
         return false;
     }),
-    User("u", i -> {
+    User("usr", i -> {
         System.out.println("User");
         try {
             UserView.main(i);
@@ -27,7 +27,7 @@ public enum NavigationOfPredicate {
         }
         return true;
     }),
-    Article("a", i -> {
+    Article("art", i -> {
         System.out.println("Article");
         try {
             ArticleView.main(i);
@@ -36,7 +36,7 @@ public enum NavigationOfPredicate {
         }
         return true;
     }),
-    Board("b", i -> {
+    Board("boa", i -> {
         System.out.println("Board");
         try {
             BoardView.main(i);
@@ -45,12 +45,12 @@ public enum NavigationOfPredicate {
         }
         return true;
     }),
-    Account("ac", i -> {
+    Account("acc", i -> {
         System.out.println("Account");
         AccountView.main(i);
         return true;
     }),
-    Crawler("c", i -> {
+    Crawler("crw", i -> {
         System.out.println("Crawler");
         try {
             CrawlerView.main(i);
@@ -69,12 +69,12 @@ public enum NavigationOfPredicate {
     }
 
     public static Boolean select(Scanner input) {
-        System.out.println("=== x-Exit " +
-                "u-User " +
-                "a-Article " +
-                "b-Board " +
-                "ac-Account " +
-                "c-Crawler " +
+        System.out.println("=== x " +
+                "usr " +
+                "art " +
+                "boa " +
+                "acc " +
+                "crw " +
                 "===");
         String msg = input.next();
         return Stream.of(values())
