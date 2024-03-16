@@ -9,7 +9,7 @@ public class AccountView {
             System.out.println("[Account] 0-Exit 1-Create 2-Deposit " +
                     "3-Withdraw 4-Balance 5-Remove 6-Account List");
             switch (input.next()) {
-                case "0":
+                case "x":
                     return;
                 case "1":
                     System.out.println("Create Account");

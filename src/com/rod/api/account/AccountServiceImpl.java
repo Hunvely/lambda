@@ -13,11 +13,13 @@ import java.util.Optional;
 public class AccountServiceImpl extends AbstractService<Account> implements AccountService {
 
     private static AccountServiceImpl instance = new AccountServiceImpl();
-    List<Account> accounts;
-    Map<String, User> users;
+    private List<Account> accounts;
+    private Map<String, User> users;
+    private AccountRepository accountRepo;
 
-    private AccountServiceImpl() {
+    public AccountServiceImpl() {
         this.accounts = new ArrayList<>();
+        accountRepo = AccountRepository.getInstance();
     }
 
     public static AccountServiceImpl getInstance() {
@@ -41,7 +43,7 @@ public class AccountServiceImpl extends AbstractService<Account> implements Acco
 
     @Override
     public Messenger save(Account account) {
-        return null;
+        return accountRepo.save();
     }
 
     @Override

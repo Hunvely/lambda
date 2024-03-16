@@ -1,12 +1,16 @@
 package com.rod.api.account;
 
 import com.rod.api.enums.Messenger;
+import lombok.Getter;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
 public class AccountController {
+
+    @Getter
+    private static final AccountController instancfe = new AccountController();
     AccountServiceImpl accountService;
 
     public AccountController() {
@@ -15,7 +19,6 @@ public class AccountController {
 
     public Messenger createAccount(Scanner sc) {
         return accountService.save(Account.builder()
-                .id(sc.nextLong())
                 .accountNumber(sc.next())
                 .accountHolder(sc.next())
                 .balance(sc.nextDouble())
@@ -26,7 +29,6 @@ public class AccountController {
 
     public String deposit(Scanner sc) {
         return accountService.deposit(Account.builder()
-                .id(sc.nextLong())
                 .accountNumber(sc.next())
                 .accountHolder(sc.next())
                 .balance(sc.nextDouble())
@@ -36,7 +38,6 @@ public class AccountController {
 
     public String withdraw(Scanner sc) {
         return accountService.withdraw(Account.builder()
-                .id(sc.nextLong())
                 .accountNumber(sc.next())
                 .accountHolder(sc.next())
                 .balance(sc.nextDouble())
