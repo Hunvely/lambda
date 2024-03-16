@@ -11,6 +11,6 @@ public class ArticleView {
 
         ArticleController articleController = new ArticleController();
 
-        while (ArticleRouter.articleSelect(input, articleController));
+        while (ArticleRouter.articleSelect(input));
     }
 }
