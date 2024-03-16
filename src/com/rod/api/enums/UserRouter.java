@@ -9,7 +9,8 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-public enum UserRouter {
+public enum
+UserRouter {
 
     exit("x", (scanner) -> {
         return false;
@@ -68,11 +69,11 @@ public enum UserRouter {
     });
 
     private final String menu;
-    private final Predicate<Scanner> Predicate;
+    private final Predicate<Scanner> predicate;
 
-    UserRouter(String menu, Predicate<Scanner> Predicate) {
+    UserRouter(String menu, Predicate<Scanner> predicate) {
         this.menu = menu;
-        this.Predicate = Predicate;
+        this.predicate = predicate;
     }
 
     public static Boolean userRoute(Scanner input) throws SQLException {
@@ -82,7 +83,7 @@ public enum UserRouter {
         return Stream.of(values())
                 .filter(i -> i.menu.equals(msg))
                 .findAny().orElseThrow(() -> new IllegalArgumentException("잘못된 입력입니다."))
-                .Predicate.test(input);
+                .predicate.test(input);
     }
 
 
