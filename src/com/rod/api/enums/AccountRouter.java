@@ -14,7 +14,12 @@ public enum AccountRouter {
         return false;
     }),
     CREATE_ACCOUNT("touch", scanner -> {
-        AccountController.getInstancfe().createAccount(scanner);
+        System.out.println("Please input [account] [accountHolder] [balance] you wish to register");
+        try {
+            AccountController.getInstancfe().createAccountTable();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return true;
     }),
     DELETE_ACCOUNT("rm", scanner -> {

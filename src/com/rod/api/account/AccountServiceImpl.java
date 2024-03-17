@@ -4,6 +4,7 @@ import com.rod.api.common.AbstractService;
 import com.rod.api.enums.Messenger;
 import com.rod.api.user.User;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,4 +83,7 @@ public class AccountServiceImpl extends AbstractService<Account> implements Acco
     }
 
 
+    public Messenger createAccountTable() throws SQLException {
+        return accountRepo.createAccountTable();
+    }
 }
