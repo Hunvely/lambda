@@ -40,7 +40,11 @@ public enum NavigationOfFunction {
         return "";
     }),
     Account("ac", scanner -> {
-        AccountView.main(scanner);
+        try {
+            AccountView.main(scanner);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return "";
     }),
     Crawler("c", scanner -> {

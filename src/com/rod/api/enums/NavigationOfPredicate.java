@@ -47,7 +47,11 @@ public enum NavigationOfPredicate {
     }),
     Account("acc", i -> {
         System.out.println("Account");
-        AccountView.main(i);
+        try {
+            AccountView.main(i);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return true;
     }),
     Crawler("crw", i -> {
